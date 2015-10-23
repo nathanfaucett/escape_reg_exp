@@ -1,26 +1,34 @@
 {
-  "name": "escape_reg_exp",
+  "name": "escape_regexp",
   "version": "0.0.1",
   "description": "escapeRegExp for the browser and node.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/nathanfaucett/escape_reg_exp.git"
+    "url": "https://github.com/nathanfaucett/escape_regexp.git"
   },
   "main": "src/index.js",
+  "scripts": {
+    "test": "npm run test-node",
+    "test-node": "node ./test | ./node_modules/.bin/tap-spec",
+    "test-node-raw": "node ./test",
+    "test-browser-local": "zuul --local 8080 --ui tape -- ./test"
+  },
   "keywords": [
-    "escape_reg_exp",
-    "escape_reg_exp.js"
+    "escape_regexp",
+    "escape_regexp.js"
   ],
   "author": "Nathan Faucett",
-  "license": "BSD-2-Clause",
+  "license": "MIT",
   "readmeFilename": "README.md",
   "devDependencies": {
     "grunt": "^0.4.5",
-    "grunt-contrib-jshint": "^0.10.0",
-    "grunt-jsbeautifier": "^0.2.7",
-    "mocha": "^2.1.0"
+    "grunt-contrib-jshint": "^0.11.3",
+    "grunt-jsbeautifier": "^0.2.10",
+    "tap-spec": "^4.1.0",
+    "tape": "^4.2.0",
+    "zuul": "^3.6.0"
   },
   "dependencies": {
-    "to_string": "git://github.com/nathanfaucett/to_string"
+    "to_string": "git://github.com/nathanfaucett/to_string.git"
   }
 }
