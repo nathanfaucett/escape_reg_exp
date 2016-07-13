@@ -1,4 +1,4 @@
-var toString = require("to_string");
+var toString = require("@nathanfaucett/to_string");
 
 
 var reRegExpChars = /[.*+?\^${}()|\[\]\/\\]/g,

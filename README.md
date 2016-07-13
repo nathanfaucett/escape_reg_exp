@@ -1,4 +1,4 @@
 escapeRegExp
 =======
 
-escapeRegExp for the browser and node.js
+escapes strings RegExp special characters
